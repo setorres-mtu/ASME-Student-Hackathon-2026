@@ -28,7 +28,6 @@ Mission profile ─▶ NSGA-III ─▶ Generate population ─▶ 21 design vari
 .
 ├── README.md
 ├── bwb_inverse_design.py            # main optimization pipeline (this is the entry point)
-├── requirements.txt
 ├── data/
 │   └── bwb_structures_dataset.csv   # 13,720-row structural training set
 ├── models/
