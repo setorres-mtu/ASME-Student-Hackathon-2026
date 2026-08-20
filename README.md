@@ -27,7 +27,7 @@ Mission profile ─▶ NSGA-III ─▶ Generate population ─▶ 21 design vari
 ```
 .
 ├── README.md
-├── bwb_inverse_design.py            # main optimization pipeline (this is the entry point)
+├── bwb_inverse_design.ipynb            # main optimization pipeline (this is the entry point)
 ├── data/
 │   └── bwb_structures_dataset.csv   # 13,720-row structural training set
 ├── models/
@@ -39,9 +39,6 @@ Mission profile ─▶ NSGA-III ─▶ Generate population ─▶ 21 design vari
 │   │   ├── reg_feasible.json        # used by default — see Design notes
 │   │   └── aero_design_space.json
 │   ├── structural_forward_surrogate.joblib   # cached after first run (auto-generated)
-│   └── bwb_inverse_design_models.joblib      # optional: enables ML-seeded init
-├── notebooks/
-│   └── flight_conditions_structure.ipynb     # trains the optional inverse-seeding model
 ├── output_summary.csv               # generated: one row per mission
 ├── pareto_fronts.png                # generated: Mass vs L/D per mission
 └── technical_description.docx       # 3-page technical summary
@@ -64,7 +61,7 @@ matplotlib
 ```bash
 python bwb_inverse_design.py
 ```
-
+Remember to update the paths in the bwb_inverse_design.ipynb  . Note this originally was run on Google Colab so the first block is not necessary
 On first run this trains and caches the structural forward surrogate
 (`models/structural_forward_surrogate.joblib`) from `data/bwb_structures_dataset.csv`;
 subsequent runs load the cache. Delete the cache file to force a retrain (e.g. after
