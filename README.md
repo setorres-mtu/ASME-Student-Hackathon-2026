@@ -76,24 +76,6 @@ Output: `output_summary.csv` (21 design variables + Mass/L/D/Vp/Vf/Stress/Loss p
 mission) and `pareto_fronts.png` (Mass vs L/D Pareto front per mission, selected
 design highlighted).
 
-## Results
-
-Three mission profiles, each optimized independently (flight condition and soft
-targets are mission-specific; only `Stress ≤ 335 MPa` is shared and hard):
-
-| Case | Mass (kg) | L/D | L/D target | Vp (m³) | Vp target | Vf (m³) | Vf target | Stress (MPa) | Loss |
-|---|---|---|---|---|---|---|---|---|---|
-| 1 — High Speed Dash | 30.2 | 6.23 | 6.0 | 0.777 | 0.75 | 0.324 | 0.45 | 310.5 | 0.298 |
-| 2 — Max Endurance | 35.0 | 10.02 | 10.0 | 0.747 | 0.80 | 0.359 | 0.45 | 183.2 | 0.334 |
-| 3 — Max Capacity | 20.8 | 15.76 | 15.0 | 0.235 | 1.00 | 0.123 | 0.65 | 192.8 | 0.481 |
-
-Cases 1–2 land close to every target simultaneously. Case 3 trades off volume
-against mass (see `technical_description.docx`, §4, for why: hitting its volume
-targets requires roughly a 9× mass increase, which the scoring formula's fixed
-`M_ref = 50 kg` penalizes more than it rewards for closing the volume shortfall —
-a genuine property of the specified scoring metric, not an optimizer failure. The
-Pareto front for case 3 does contain a design that meets both volume targets at
-~170 kg; see the technical description for the trade-off numbers).
 
 ## Design notes
 
