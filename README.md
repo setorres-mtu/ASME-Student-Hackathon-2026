@@ -59,9 +59,10 @@ matplotlib
 ## Running
 
 ```bash
-python bwb_inverse_design.py
+python bwb_inverse_design.ipynb
 ```
-Remember to update the paths in the bwb_inverse_design.ipynb  . Note this originally was run on Google Colab so the first block is not necessary
+Remember to update the paths in the bwb_inverse_design.ipynb . Note this originally was run on Google Colab so the first block is not necessary.
+
 On first run this trains and caches the structural forward surrogate
 (`models/structural_forward_surrogate.joblib`) from `data/bwb_structures_dataset.csv`;
 subsequent runs load the cache. Delete the cache file to force a retrain (e.g. after
